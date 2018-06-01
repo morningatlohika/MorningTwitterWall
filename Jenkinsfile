@@ -39,9 +39,9 @@ pipeline() {
             steps {
                 script {
                     if (env.BRANCH_NAME == 'master') {
-                        gradle.run rootDir: "./", buildFile: 'build.gradle', tasks: 'clean build artifactoryPublish'
+                        gradle.run rootDir: "./", buildFile: 'build.gradle.kts', tasks: 'clean build artifactoryPublish'
                     } else {
-                        gradle.run rootDir: "./", buildFile: 'build.gradle', tasks: 'clean build'
+                        gradle.run rootDir: "./", buildFile: 'build.gradle.kts', tasks: 'clean build'
                     }
                 }
             }
