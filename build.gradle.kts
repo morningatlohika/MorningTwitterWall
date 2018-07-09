@@ -1,7 +1,6 @@
 import org.gradle.jvm.tasks.Jar
 
 group = "com.lohika.morning"
-version = "0.0.1-SNAPSHOT"
 
 val mainClass = "ua.kug.TwitterWallJSONKt"
 
