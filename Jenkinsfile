@@ -21,6 +21,7 @@ pipeline() {
     SLACK_AUTOMATION_CHANNEL = "#automation"
     SLACK_AUTOMATION_TOKEN = credentials("jenkins-ci-integration-token")
     JENKINS_HOOKS = credentials("morning-at-lohika-jenkins-ci-hooks")
+    GIT_TOKEN = credentials("Jenkins-GitHub-Apps-Personal-access-tokens")
   }
 
   parameters {
