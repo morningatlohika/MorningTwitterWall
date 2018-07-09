@@ -23,6 +23,14 @@ pipeline() {
     JENKINS_HOOKS = credentials("morning-at-lohika-jenkins-ci-hooks")
   }
 
+  parameters {
+    booleanParam(
+        name: 'release',
+        description: 'release new version',
+        defaultValue: false
+    )
+  }
+
   stages {
 
     stage('Pre configuration') {
