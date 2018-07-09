@@ -16,7 +16,7 @@ application {
 }
 
 release {
-    tagTemplate = "$name-$version"
+    tagTemplate = "\$name-\$version"
 }
 
 dependencies {
