@@ -9,10 +9,15 @@ plugins {
     application
     java
     kotlin("jvm") version "1.2.40"
+    id("net.researchgate.release")  version "2.6.0"
 }
 
 application {
     mainClassName = mainClass
+}
+
+release {
+    tagTemplate = "$name-$version"
 }
 
 dependencies {
