@@ -3,6 +3,8 @@
 /out/
 !gradle/wrapper/gradle-wrapper.jar
 
+twitter4j.properties
+
 ### Eclipse ###
 .apt_generated
 .classpath

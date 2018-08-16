@@ -34,7 +34,8 @@ fun main(args: Array<String>) {
             actions = listOf(
                     RetweetAction(
                             twitter = TwitterFactory(configuration).instance,
-                            stopWords = prop.getProperty("app.stopwords", "ugly,no soup,bad,yegor256").split(",")
+                            stopWords = prop.getProperty("app.stopwords", "ugly,no soup,bad,yegor256").split(","),
+                            ignore = prop.getProperty("app.ignore", "user1,user2").split(",")
                     ),
                     Consumer {
                         println(it.text)

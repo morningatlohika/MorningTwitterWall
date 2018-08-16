@@ -20,7 +20,7 @@ release {
 }
 
 dependencies {
-    val twitter4jVer = "4.0.6"
+    val twitter4jVer = "4.0.7"
     val jacksonCoreVer = "2.9.2"
 
     compile(kotlin("stdlib-jdk8"))
