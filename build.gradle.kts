@@ -7,8 +7,9 @@ val mainClass = "ua.kug.TwitterWallJSONKt"
 plugins {
     application
     java
-    kotlin("jvm") version "1.2.40"
+    kotlin("jvm") version "1.3.61"
     id("net.researchgate.release")  version "2.6.0"
+    id("org.sonarqube") version "2.8"
 }
 
 application {
@@ -46,7 +47,7 @@ val fatJar = task("fatJar", type = Jar::class) {
         attributes["Implementation-Version"] = version
         attributes["Main-Class"] = mainClass
     }
-    from(configurations.runtime.map({ if (it.isDirectory) it else zipTree(it) }))
+    from(configurations.runtimeClasspath.get().map({ if (it.isDirectory()) it else zipTree(it) }))
     with(tasks["jar"] as CopySpec)
 }
 
